@@ -8,6 +8,8 @@
 
 Актуальная редакция роли, v2, по девяти разделам чеклиста: [docs/role-v2.md](docs/role-v2.md).
 
+Литература и материалы, включая русские издания: [docs/literature.md](docs/literature.md).
+
 Лестница: до 3 уровня DevOps, вход на 3–4, L5 на 5 уровне, расширенное согласование на 6. [docs/grades.md](docs/grades.md).
 
 Паспорт со счётом по девяти разделам: [docs/role-by-checklist.md](docs/role-by-checklist.md).

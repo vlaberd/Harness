@@ -175,96 +175,9 @@ AgentOps в этой таблице — исходная роль, из кото
 
 ## Рекомендуемые образовательные материалы
 
-Курсы, статьи, книги и другие материалы для освоения роли.
+Курсы, статьи, книги и другие материалы для освоения роли собраны отдельно: [literature.md](literature.md).
 
-Начинать стоит с тем, где в текущем опыте больше всего пробелов. Язык большинства материалов — английский.
-
-Устройство среды агентов:
-
-| Материал | Зачем |
-| --- | --- |
-| [Anthropic. Effective harnesses for long-running agents](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) | Долгая работа и передача результата между сессиями: контрольные точки и файл прогресса |
-| [Anthropic. Harness design for long-running apps](https://www.anthropic.com/research/harness-design-long-running-apps) | Разделение работы между агентами и независимая проверка результата |
-| [Anthropic. Scaling Managed Agents](https://www.anthropic.com/research/managed-agents) | Разделение истории сессии, управляющего исполнения и изолированной рабочей среды |
-| [Anthropic. Building effective agents](https://www.anthropic.com/research/building-effective-agents) | Базовые схемы построения агентов и их совместной работы |
-
-Протоколы:
-
-| Материал | Зачем |
-| --- | --- |
-| [Документация MCP](https://modelcontextprotocol.io/) | Как к агенту подключаются инструменты и данные |
-| [Anthropic Academy. Introduction to Model Context Protocol](https://anthropic.skilljar.com/introduction-to-model-context-protocol) | Короткий практический курс: сервер и клиент MCP. Продолжение на той же площадке — MCP Advanced Topics |
-| [Документация A2A](https://a2a-protocol.org/latest/) | Передача задач, состояний и результатов между агентами |
-| [DeepLearning.AI. A2A: The Agent2Agent Protocol](https://www.deeplearning.ai/short-courses/a2a-the-agent2agent-protocol/) | Короткий курс: несколько агентов обмениваются задачами по A2A |
-
-Изоляция, политики и наблюдаемость:
-
-| Материал | Зачем |
-| --- | --- |
-| [Kubernetes. Multi-tenancy](https://kubernetes.io/docs/concepts/security/multi-tenancy/) | Разделение ресурсов и доступов между командами |
-| [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) | Изолированные окружения для агентов в Kubernetes |
-| [CKAD](https://www.cncf.io/training/certification/ckad/) и [CKS](https://www.cncf.io/training/certification/cks/) | Kubernetes для приложений и безопасность кластера |
-| [Open Policy Agent](https://www.openpolicyagent.org/docs/latest/) | Политики как код |
-| [OpenTelemetry. Gen AI semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | Метрики, логи, трассировки и соглашения для действий агентов |
-| [OWASP GenAI. Agentic AI — Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) | Угрозы агентных систем и меры защиты. Требования пишет Security, механизмы — эта роль |
-
-Надёжность и платформа как продукт:
-
-| Материал | Зачем |
-| --- | --- |
-| [Google. Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/) и [The Site Reliability Workbook](https://sre.google/workbook/table-of-contents/) | Надёжность, наблюдаемость, инциденты, безопасный выпуск |
-| Michael Nygard. Release It! | Устойчивость к сбоям, в том числе circuit breaker. [Издание](https://pragprog.com/titles/mnee2/release-it-second-edition/) |
-| Martin Kleppmann. Designing Data-Intensive Applications | Состояние, распределённые системы, повторы и согласованность |
-| [Temporal. Learn](https://learn.temporal.io/) | Практикумы по работам, которые переживают сбой и продолжаются |
-| [CNCF. Platforms White Paper](https://tag-app-delivery.cncf.io/whitepapers/platforms/) | Что такое внутренняя платформа и как измерять её успех |
-| Camille Fournier, Ian Nowland. Platform Engineering. O'Reilly, 2024 | Внутренняя платформа как продукт |
-| Matthew Skelton, Manuel Pais. Team Topologies. [teamtopologies.com](https://teamtopologies.com/) | Как платформенная команда обслуживает продуктовые команды |
-
-Дополнительные материалы ниже проверены отдельно: каждый адрес открывается и принадлежит сайту названного проекта. Это не обязательный план и не замена списка v2.
-
-Изоляция сессии на кластере:
-
-| Материал | Зачем |
-| --- | --- |
-| [Kubernetes. Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) | Профиль ограничений до запуска. Тот же приём, что профиль песочницы до первого действия |
-| [Kubernetes. Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) | Сетевая граница сессии: куда ей можно ходить |
-| [Kubernetes. Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/) | Лимит ресурсов на пространство имён, чтобы одна сессия не съела чужие |
-| [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/docs/) | Политика OPA на допуске объектов в кластер. Имя инструмента не требование роли |
-
-След, который нельзя подменить, и неопределённый результат:
-
-| Материал | Зачем |
-| --- | --- |
-| [Google. Building Secure and Reliable Systems](https://sre.google/books/building-secure-reliable-systems/) | Безопасность и надёжность как одно проектирование: нет проверки — нет действия |
-| [SRE. Addressing Cascading Failures](https://sre.google/sre-book/addressing-cascading-failures/) | Как сбой одной сессии не снимает гарантии с остальных |
-| [SRE. Handling Overload](https://sre.google/sre-book/handling-overload/) | Нагрузка, отказ в приёме работы и деградация без обрушения всей среды |
-| [SRE. Postmortem Culture](https://sre.google/sre-book/postmortem-culture/) | Разбор без поиска виноватого: виден ход, а не человек |
-| [Martin Fowler. CircuitBreaker](https://martinfowler.com/bliki/CircuitBreaker.html) | Автоматический останов серии сбоев. Короткое определение, не реализация |
-| [Stripe. Idempotent requests](https://stripe.com/blog/idempotency) | Ключ повтора, чтобы внешнее действие не выполнилось дважды |
-| [Google AIP-155. Request identification](https://google.aip.dev/155) | Тот же приём в проектировании API: повтор запроса не создаёт второй эффект |
-| [Temporal. Understanding Temporal](https://docs.temporal.io/evaluate/understanding-temporal) | Длинная работа, которая продолжается после падения процесса |
-| [W3C Trace Context](https://www.w3.org/TR/trace-context/) | Как связать передачу задачи, вызов инструмента и проверку в одну историю |
-
-Каталог инструментов, обмен и требования Security:
-
-| Материал | Зачем |
-| --- | --- |
-| [MCP. Security best practices, ревизия 2025-11-25](https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices) | Официальные риски MCP: права, согласие на вызов, токены, изоляция сервера. Перед опорой сверить номер ревизии на modelcontextprotocol.io |
-| [OWASP. MCP Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html) | Минимальные права инструмента, песочница сервера, запрет молчаливого одобрения вызова |
-| [A2A. Enterprise ready](https://a2a-protocol.org/latest/topics/enterprise-ready/) | TLS, идентичность, трассировка и аудит обмена между агентами. Правило компании жёстче: мимо брокера этап не передают |
-| [OWASP. LLM Top 10](https://genai.owasp.org/llm-top-10/) | Подмена инструкций через внешние данные. Требования формулирует Security, механизмы делает эта роль |
-| [NIST. AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) | Общий язык с Security. Текст политики по нему пишет не эта роль |
-| [SPIFFE](https://www.spiffe.io/docs/latest/spiffe-about/overview/) | Идентичность рабочей нагрузки. Нужна, чтобы в журнале был субъект, а не только имя пода |
-| [SLSA](https://slsa.dev/spec/latest/) | Ближайший зрелый аналог комплекта доказательств в поставке. Это не стандарт комплекта доказательств агентной задачи: его порог задаёт Eval |
-| [Sigstore](https://docs.sigstore.dev/) | Подпись артефакта, которую нельзя тихо подменить. Рядом со SLSA, для выпуска объектов среды |
-
-Платформа как продукт для нескольких команд:
-
-| Материал | Зачем |
-| --- | --- |
-| [CNCF. Platform Engineering Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/) | Пять сторон зрелости внутренней платформы. Высший уровень не цель сам по себе: модель прямо просит не гнаться за ним без нужды |
-
-Учебный проект. Два агента передают друг другу задачу через платформу, используют один внешний инструмент и продолжают работу после искусственного сбоя. В проекте должны быть проверка прав до действия, история действий, ограничение расходов и обработка случая, когда внешний сервис выполнил операцию, но ответ потерялся.
+Там весь каталог, русские издания и две книги раннего выпуска O'Reilly, которые ближе всего к оболочке: Harness Engineering и Agentic Engineering. Начинать стоит с тем, где в текущем опыте больше всего пробелов. Список не учебный план компании и не требование грейда.
 
 ## Положение в организационной структуре
 
