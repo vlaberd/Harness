@@ -6,6 +6,8 @@
 
 ## Что открыть
 
+Страницы в формате Outline, их можно переносить в карточку роли: [docs/outline/Harness Platform Engineer.md](docs/outline/Harness%20Platform%20Engineer.md).
+
 Актуальная редакция роли, v2, по девяти разделам чеклиста: [docs/role-v2.md](docs/role-v2.md).
 
 Литература и материалы, включая русские издания: [docs/literature.md](docs/literature.md).
